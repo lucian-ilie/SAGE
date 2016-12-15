@@ -1,0 +1,63 @@
+SYSTEM REQUIREMENTS
+=============================================================================
+SAGE is a program to assemble genomes using reads from genome sequencing
+machines.  It is recommended that the reads be corrected with RACER before
+assembling the genome with SAGE.  SAGE is designed to run on a 64-bit Linux 
+environment with gcc installed. For running SAGE on viral or bacterial genomes
+it is recommended to have 10GB of memory available.  Larger genomes will 
+require more memory.
+
+INSTALLATION
+=============================================================================
+
+Extract the tar file with the following command:
+
+	tar -xf sage.tar
+
+Change directories to the sage folder and type:
+
+	make
+
+RUNNING SAGE
+=============================================================================
+The reads should be corrected first using RACER which can be downloaded here:
+
+	http://www.csd.uwo.ca/~ilie/RACER
+
+Run RACER using the command:
+
+	RACER <inputReads> <correctedReads> <genomeLength>
+
+"RACER" is replaced by the appropriate version used.
+<inputReads> is the input file containing the reads in FASTA or FASTQ format.
+<correctedReads> is the file name that will contain the corrected reads.
+<genomeLength> is the approximate length of the DNA molecule in base pairs.
+	- if only parts of a genome were sequenced, then only the total length of 
+	  those parts should be used (instead of the length of the total genome).
+	- a precise value is not necessary, an approximation will work well.
+
+SAGE can then be run with the corrected reads using the command:
+
+	SAGE <inputFile(s)> <outputDir> <minOverlapLength>
+
+
+<inputFile(s)> are the FASTA or FASTQ files that contain the corrected reads.
+<outputDir> is the name of the output directory.
+<minOverlapLength> is the minimum length two reads must overlap to have an edge in 
+	      the overlap graph. Note that <minOverlap> must be smaller than 
+	      the read length in the inputFile.
+
+INPUT DATASET
+=============================================================================
+SAGE accepts FASTA and FASTQ input files. All the reads in the input files 
+should have the same length. Mate pairs should be placed one after another in 
+the FASTA file.  The mate pairs should be forward-reverse oriented.
+
+
+OUTPUT FILES
+=============================================================================
+SAGE outputs the single-end contigs in a file named SingleEnd.fasta and the 
+paired-end results are in a file named 
+{firstInputFileName}_SAGE_assembly_{overlapLength}.fasta
+There is also a text file with information about the assembly in a file named 
+{firstInputFileName}_SAGE_output_{overlapLength}.fasta
