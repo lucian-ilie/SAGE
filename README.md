@@ -26,8 +26,8 @@ The assemblies for the datasets in the paper can be found below:
  - [E.coli](http://www.csd.uwo.ca/~ilie/SAGE/E.coli.fasta)
  - [C.thermocellum](http://www.csd.uwo.ca/~ilie/SAGE/C.thermocellum.fasta)
  - [C.elegans](http://www.csd.uwo.ca/~ilie/SAGE/C.elegans.fasta)
- 
- # CITE
- If you use SAGE, please cite:
+
+# CITE
+If you use SAGE, please cite:
  
     L. Ilie, B. Haider, M. Molnar, R. Solis-Oba, [SAGE: String-graph Assembly of GEnomes, BMC Bioinformatics](http://www.biomedcentral.com/1471-2105/15/302/abstract) 15 (2014) 302.
