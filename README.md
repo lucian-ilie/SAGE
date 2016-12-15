@@ -29,5 +29,5 @@ The assemblies for the datasets in the paper can be found below:
 
 # CITE
 If you use SAGE, please cite:
- 
-    L. Ilie, B. Haider, M. Molnar, R. Solis-Oba, [SAGE: String-graph Assembly of GEnomes, BMC Bioinformatics](http://www.biomedcentral.com/1471-2105/15/302/abstract) 15 (2014) 302.
+
+L. Ilie, B. Haider, M. Molnar, R. Solis-Oba, [SAGE: String-graph Assembly of GEnomes, BMC Bioinformatics](http://www.biomedcentral.com/1471-2105/15/302/abstract) 15 (2014) 302.
